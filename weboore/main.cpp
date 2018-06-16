@@ -20,7 +20,6 @@ int main(void) {
 		std::cout << "Sub:" << OpFuncSub::calc(x, y) << "\n";
 		std::cout << "Mul:" << OpFuncMul::calc(x, y) << "\n";
 		std::cout << "Div:" << OpFuncDiv::calc(x, y) << "\n";
-		std::cout << "Mod:" << OpFuncMod::calc(x, y) << "\n";
 	}
 
 /*
