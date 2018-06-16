@@ -1,34 +1,44 @@
 #include <iostream>
-#include "vector.h"
-using namespace wbr;
+#include "utils/op_func.h"
+using namespace wbr::base;
 
-using Vector = base::Vector<int, 3>;
-
-void vector_out(const Vector& v) {
+/*
+template <class VT> void vector_out(const VT& v) {
 	std::cout << "(";
-	v.doEach([&](Vector::CT v){std::cout << v << ", "; } );
+	v.doEach([&](typename VT::CT v){std::cout << v << ", "; } );
 	std::cout << ")\n";
 }
+*/
 
 int main(void) {
 
-	const Vector vec1(10, 20, 30);
-	const Vector vec2(5, 6, 7);
+	while(true) {
+		int x, y;
+		std::cin >> x >> y;
+
+		std::cout << "Add:" << OpFuncAdd::calc(x, y) << "\n";
+		std::cout << "Sub:" << OpFuncSub::calc(x, y) << "\n";
+		std::cout << "Mul:" << OpFuncMul::calc(x, y) << "\n";
+		std::cout << "Div:" << OpFuncDiv::calc(x, y) << "\n";
+		std::cout << "Mod:" << OpFuncMod::calc(x, y) << "\n";
+	}
+
+/*
+	Vector<int, 3> vec1(15, 63, 59);
+	Vector<int, 3> vec2(21, 33, 29);
 
 //	vec1.doEach([&](Vector::T v){std::cin >> v; });
 //	vec2.doEach([&](Vector::T v){std::cin >> v; });
 
-	Vector vec3 = vec1.forEach(
-		[](Vector::CT v1, Vector::CT v2){
-		//	std::cout << v1 << " + " << v2 << "\n";
-		//	v1 += v2;
-			return v1 + 10;
-		},
-		(const Vector&&)vec2
-	);
+	auto vec3 = vec1 + vec2;
+
+	auto vec4 = vec1.forEach([](decltype(vec1)::CT v) { return v * v; });
 	
 	vector_out(vec1);
+	vector_out(vec2);
 	vector_out(vec3);
+	vector_out(vec4);
+*/
 
 	system("pause");
 	return 0;

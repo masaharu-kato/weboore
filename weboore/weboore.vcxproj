@@ -120,7 +120,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="vector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="math\vector.h" />
+    <ClInclude Include="utils\op_func.h" />
+    <ClInclude Include="utils\type_tuple.h" />
+    <ClInclude Include="utils\vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

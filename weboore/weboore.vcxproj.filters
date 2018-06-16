@@ -10,13 +10,27 @@
     <Filter Include="css">
       <UniqueIdentifier>{ca2f40cd-56e5-4eee-9080-9dc9af98d8e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{32851fe3-36d1-4fc1-8a21-3287212c31ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vector.h">
-      <Filter>utils</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>main</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utils\type_tuple.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\vector.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="math\vector.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\op_func.h">
+      <Filter>utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
