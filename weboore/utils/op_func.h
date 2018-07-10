@@ -27,6 +27,7 @@ namespace wbr::base {
 	};
 
 #define __COMMA__ ,
+#define __not_const__
 
 #define __generateOpFuncDoubleWithSet(_name_, _op_)\
 	__generateOpFuncDouble(_name_, _op_, , const)\
@@ -55,19 +56,19 @@ namespace wbr::base {
 	__generateOpFuncDouble(NotEq	, !=,   , const);
 	__generateOpFuncDouble(Comma	, __COMMA__,   , const);
 	__generateOpFuncDouble(CSuffix	, [ , ] , const);
-	__generateOpFuncDouble(Suffix	, [ , ] ,);
+	__generateOpFuncDouble(Suffix	, [ , ] , __not_const__);
 	
 	__generateOpFuncSingle(Plus		, + ,   , const);
 	__generateOpFuncSingle(Minus	, - ,   , const);
 	__generateOpFuncSingle(Deref	, * ,   , const);
 	__generateOpFuncSingle(Ref		, & ,   , const);
-	__generateOpFuncSingle(BitNot	, ~ ,   , const);
+	__generateOpFuncSingle(BitFlip	, ~ ,   , const);
 	__generateOpFuncSingle(BoolNot	, ! ,   , const);
 	
-	__generateOpFuncSingle(RInc		,   , ++,);
-	__generateOpFuncSingle(RDec		,   , --,);
-	__generateOpFuncSingle(LInc		, ++,   ,);
-	__generateOpFuncSingle(LDec		, --,   ,);
+	__generateOpFuncSingle(RInc		,   , ++, __not_const__);
+	__generateOpFuncSingle(RDec		,   , --, __not_const__);
+	__generateOpFuncSingle(LInc		, ++,   , __not_const__);
+	__generateOpFuncSingle(LDec		, --,   , __not_const__);
 
 
 

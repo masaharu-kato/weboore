@@ -18,6 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="val.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils\type_tuple.h">
@@ -30,6 +31,9 @@
       <Filter>math</Filter>
     </ClInclude>
     <ClInclude Include="utils\op_func.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="val.h">
       <Filter>utils</Filter>
     </ClInclude>
   </ItemGroup>
